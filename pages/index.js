@@ -1,10 +1,30 @@
-import styled from 'styled-components'
+import {
+  Features,
+  Footer,
+  Gallery,
+  Header,
+  Homes,
+  Layout,
+  Realtors,
+  Sidebar,
+  Story,
+} from '../components';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+import {
+  features
+} from '../data';
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <Layout>
+      <Sidebar />
+      <Header />
+      <Realtors />
+      <Features features={features} />
+      <Story />
+      <Homes />
+      <Gallery />
+      <Footer />
+    </Layout>
+  )
 }
