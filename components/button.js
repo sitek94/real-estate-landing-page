@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { palette, typography } from '../theme';
 
-export const Button = styled.button`
+const Button = styled.button`
   border: none;
   border-radius: none;
   color: #fff;
@@ -19,3 +19,5 @@ export const Button = styled.button`
 
 
 `;
+
+export default Button;

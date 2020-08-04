@@ -8,7 +8,7 @@ import {
   Realtors,
   Sidebar,
   Story,
-} from '../components';
+} from '../layout';
 
 import {
   features
@@ -20,7 +20,7 @@ export default function Home() {
       <Sidebar />
       <Header />
       <Realtors />
-      <Features features={features} />
+      <Features />
       <Story />
       <Homes />
       <Gallery />

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import { palette } from '../theme';
-import { H3, H2 } from '../styled/typography';
-import { Button } from '../styled/button';
+import { H3, H2 } from '../components/typography';
+import Button from '../components/button';
 
 // Left part of the story section
 const Pictures = styled.div`
