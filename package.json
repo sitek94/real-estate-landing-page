@@ -10,7 +10,8 @@
     "next": "latest",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "styled-components": "^5.0.0"
+    "styled-components": "^5.0.0",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.8.0"

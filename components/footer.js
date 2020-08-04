@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { palette } from '../theme';
 
 const Wrapper = styled.footer`
-  background-color: ${({ theme }) => theme.palette.secondary.main};
+  background-color: ${palette.secondary.main};
   grid-column: full-start / full-end;
 `;
 

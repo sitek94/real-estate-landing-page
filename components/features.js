@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { H4 } from '../styled/typography';
+import { palette } from '../theme';
 
 // DESCRIPTION
 const Description = styled.p`
@@ -8,7 +9,7 @@ const Description = styled.p`
 
 // ICON
 const Icon = styled.svg`
-  fill: ${({ theme }) => theme.palette.primary.main};
+  fill: ${palette.primary.main};
   width: 4.5rem;
   height: 4.5rem;
   grid-row: 1 / span 2;
@@ -34,7 +35,6 @@ function Feature({ title, description, src }) {
     </FeatureWrapper>
   );
 }
-
 
 // FEATURES
 const Wrapper = styled.section`

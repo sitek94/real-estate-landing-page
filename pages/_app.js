@@ -1,27 +1,6 @@
 import App from 'next/app'
-import { ThemeProvider, createGlobalStyle } from 'styled-components'
-
-const theme = {
-  palette: {
-    primary: {
-      main: '#c69963',
-      dark: '#b28451'
-    },
-    secondary: {
-      main: '#101d2c'
-    },
-    grey: {
-      light1: '#f9f7f6',
-      light2: '#aaa',
-      dark1: '#54483A',
-      dark2: '#6D5D4B'
-    }
-  },
-  typography: {
-    fontFamily: '"Nunito", sans-serif',
-    displayFontFamily: '"Josefin Sans", sans-serif'
-  }
-}
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { palette, typography, space } from '../theme';
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -38,8 +17,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: ${({ theme }) => theme.typography.fontFamily};
-    color: ${({ theme }) => theme.palette.primary.main};
+    font-family: ${typography.fontFamily};
+    color: ${palette.primary.main};
     font-weight: 300;
     line-height: 1.6;
   }
@@ -49,7 +28,10 @@ export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider 
+        // Required to use styled-system's spacing
+        theme={{ space }}
+      >
         <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>

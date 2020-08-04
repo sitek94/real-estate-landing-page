@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { palette } from '../theme';
 
 const Wrapper = styled.section`
-  background-color: ${({ theme }) => theme.palette.grey.dark1};
+  background-color: ${palette.grey.dark1};
   grid-column: full-start / full-end;
 `
 

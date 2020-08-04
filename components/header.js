@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { palette } from '../theme';
 
 const Wrapper = styled.header`
-  background-color: ${({ theme }) => theme.palette.grey.dark2};
+  background-color: ${palette.grey.dark2};
   grid-column: full-start / col-end 6;
 `
 
