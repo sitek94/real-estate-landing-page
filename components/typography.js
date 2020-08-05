@@ -9,6 +9,9 @@ const heading = () => `
 
 export const H1 = styled.h1`
   ${heading}
+  font-size: 4.5rem;
+  color: ${palette.grey.light1};
+  line-height: 1;
 `;
 export const H2 = styled.h2`
   ${heading}
