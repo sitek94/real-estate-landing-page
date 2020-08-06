@@ -24,7 +24,8 @@ export const space = ['2rem', '3rem', '4rem', '8rem'];
 
 // RESPONSIVE DESIGN BREAKPOINTS
 export const breakpoints = {
-  xl: '75em', // 75em = 1200px
-  lg: '62.5em', // 62.5em = 1000px
-
+  xl: '75em',     // 75em ----- 1200px
+  lg: '62.5em',   // 62.5em --- 1000px
+  md: '50em',     // 50em ----- 800px
+  xs: '37.5em',   // 37.5em --- 600px
 }

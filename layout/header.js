@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { palette } from '../theme';
+import { palette, breakpoints } from '../theme';
 import { H1, H3 } from '../components/typography';
 import Button from '../components/button';
 
@@ -21,6 +21,14 @@ const Wrapper = styled.header`
   grid-template-columns: minmax(min-content, max-content);
   row-gap: 1.5rem;
   justify-content: center;
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: ${breakpoints.xs}) {
+    padding: 5rem;
+  }
 `;
 
 const LogoImg = styled.img`

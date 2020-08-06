@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { palette } from '../theme';
+import { palette, breakpoints } from '../theme';
 import { H3, H2 } from '../components/typography';
 import Button from '../components/button';
 
@@ -12,11 +12,17 @@ const Pictures = styled.div`
       ${palette.primary.main + '80'}, ${palette.primary.main + '80'}
     ),
     url(../images/back.jpg);
+  background-size: cover;
 
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(6, 1fr);
   align-items: center;
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+    grid-column: 1 / -1;
+    padding: 6rem;
+  }
 `;
 
 const CoupleImg = styled.img`
@@ -24,6 +30,11 @@ const CoupleImg = styled.img`
   grid-row: 2 / span 4;
   grid-column: 2 / span 4;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+    grid-column: 1 / 5;
+    grid-row: 1 / -1;
+  }
 `;
 // Increased width to achieve overlapping effect
 const HouseImg = styled.img`
@@ -32,6 +43,11 @@ const HouseImg = styled.img`
   grid-column: 4 / span 3;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
   z-index: 10;
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+    grid-row: 1 / -1;
+    width: 100%;
+  }
 `;
 
 // Right part of the story section
@@ -45,6 +61,11 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+  }
 `;
 
 const StoryText = styled.p`

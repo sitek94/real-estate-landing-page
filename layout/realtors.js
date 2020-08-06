@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { palette } from '../theme';
+import { palette, breakpoints } from '../theme';
 import { H3, H4 } from '../components/typography';
 
 const Wrapper = styled.div`
@@ -12,6 +12,10 @@ const Wrapper = styled.div`
   align-content: center;
   justify-content: center;
   justify-items: center;
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+    grid-column: 1 / -1;
+  }
 `;
 
 const List = styled.div`
@@ -20,6 +24,14 @@ const List = styled.div`
   column-gap: 2rem;
   row-gap: 5vh;
   align-items: center;
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+    grid-template-columns: repeat(3, min-content max-content);
+  }
+
+  @media only screen and (max-width: ${breakpoints.md}) {
+    grid-template-columns: min-content max-content;
+  }
 `;
 
 const Img = styled.img`
