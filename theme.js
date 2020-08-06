@@ -19,5 +19,12 @@ export const typography = {
   displayFontFamily: '"Josefin Sans", sans-serif',
 };
 
-/* Consistend spacing to use with styled-system */
+// Consistend spacing to use with styled-system
 export const space = ['2rem', '3rem', '4rem', '8rem'];
+
+// RESPONSIVE DESIGN BREAKPOINTS
+export const breakpoints = {
+  xl: '75em', // 75em = 1200px
+  lg: '62.5em', // 62.5em = 1000px
+
+}

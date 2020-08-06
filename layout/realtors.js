@@ -33,7 +33,6 @@ const HousesSold = styled.p`
   text-transform: uppercase;
   color: ${palette.grey.light2};
   margin-top: -3px;
-
 `;
 
 export default function Realtors() {
@@ -42,7 +41,7 @@ export default function Realtors() {
       <H3>Top 3 Realtors</H3>
       <List>
         {realtors.map((realtor, i) => (
-          <>
+          <React.Fragment key={realtor.name}>
             <Img
               src={`images/realtor-${i + 1}.jpeg`}
               alt={`${realtor.name} photo`}
@@ -51,7 +50,7 @@ export default function Realtors() {
               <H4 color="light">{realtor.name}</H4>
               <HousesSold>{realtor.housesSold} houses sold</HousesSold>
             </Details>
-          </>
+          </React.Fragment>
         ))}
       </List>
     </Wrapper>

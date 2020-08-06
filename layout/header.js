@@ -17,8 +17,8 @@ const Wrapper = styled.header`
   padding-top: 4rem;
 
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   row-gap: 1.5rem;
   justify-content: center;
 `;
@@ -55,9 +55,11 @@ const SeenOnLogos = styled.div`
   grid-template-columns: repeat(4, 1fr);
   column-gap: 3rem;
   justify-items: center;
+  align-items: center;
 `;
 const SeenOnLogoImg = styled.img`
-  height: 2.5rem;
+  max-height: 2.5rem;
+  max-width: 100%;
   filter: brightness(70%);
 `;
 

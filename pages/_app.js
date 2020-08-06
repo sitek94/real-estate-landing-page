@@ -1,6 +1,6 @@
 import App from 'next/app'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { palette, typography, space } from '../theme';
+import { palette, typography, space, breakpoints } from '../theme';
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -14,6 +14,10 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px
+
+    @media only screen and (max-width: ${breakpoints.xl}) {
+      font-size: 50%;
+    }
   }
 
   body {

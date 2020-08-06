@@ -10,10 +10,6 @@ import {
   Story,
 } from '../layout';
 
-import {
-  features
-} from '../data';
-
 export default function Home() {
   return (
     <Layout>
